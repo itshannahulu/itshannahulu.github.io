@@ -50,11 +50,10 @@ A full and updated list is available on the [Publications](/publications/) page.
 
 ---
 
-## News
+## Writing samples
 
-- **2025** – Manuscript on spatially optimized forage cultivation submitted to *Agricultural Systems*.  
-- **2025** – Developed a 24-hour risk-aware battery scheduling model for CAISO prices as part of my capstone research.  
-- **2024–2025** – Began LROE and revenue decomposition project with Prof. Elliott using 2012–2024 CAISO data.
+- [Injection Height Perturbation – Writing Sample](/files/injection_height_perturbation_writing_sample.pdf)  
+- [Time Series Analysis on Seismic Activity in Haiti](/files/time_series_seismic_haiti.pdf)
 
 ---
 
