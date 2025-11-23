@@ -43,17 +43,30 @@
 ;
 
 
+/* Wallpaper */
 body{
   background: url("/files/bg.png") center/cover fixed no-repeat;
 }
 
+/* Make panels transparent */
 .masthead,
 .page,
+.page__inner,
+.page__content,
 .page__footer,
-.initial-content,
-.page__inner{
-  background: #fff;               /* solid white panels */
+.initial-content {
+  background: transparent !important;
+  box-shadow: none !important;
 }
 
-.page{ box-shadow: 0 10px 24px rgba(0,0,0,.08); }  /* subtle depth */
-
+/* Subtle overlay above the image to improve legibility */
+body::before{
+  content:"";
+  position: fixed;
+  inset: 0;
+  background: rgba(255,255,255,0.35); /* tweak 0.25–0.5 */
+  pointer-events: none;
+  z-index: 0;
+}
+/* Ensure content sits above the overlay */
+.masthead, .page, .initial-content, .page__footer { position: relative; z-index: 1; }
