@@ -42,40 +42,51 @@
     "vendor/font-awesome/brands"
 ;
 
+/* ============================
+   CUSTOM OVERRIDES
+   ============================ */
 
-/* Tighten top spacing if the hero added space */
-.initial-content { margin-top: 0 !important; padding-top: 0 !important; }
+/* remove any hero space that might be injected */
+.page__hero, .page__hero--overlay { display:none !important; }
+.initial-content { margin-top:0 !important; padding-top:0 !important; }
 
-/* Wallpaper */
+/* wallpaper */
 body{
   background: url("/files/bg.png") center/cover fixed no-repeat;
 }
 
-/* Transparent panels (no white card) */
+/* transparent content panels */
 .page,
 .page__inner,
 .page__content,
 .page__footer,
-.initial-content {
+.initial-content{
   background: transparent !important;
   box-shadow: none !important;
 }
 
-/* Full-width masthead */
+/* sticky, full-width top bar */
+:root { --masthead-h: 56px; } /* adjust if your bar is taller */
+
 .masthead{
-  background: rgba(255,255,255,0.95) !important;  /* solid: #fff */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(255,255,255,0.95);   /* #fff for fully solid */
   backdrop-filter: blur(6px);
   box-shadow: 0 1px 0 rgba(0,0,0,.08);
-  position: sticky; top: 0; z-index: 100;
+  border: 0;
+  margin: 0 !important;
 }
 
-/* Let it span the window, not a centered pill */
 .masthead__inner-wrap{
-  max-width: 100% !important;
-  padding-left: 24px; padding-right: 24px;
+  max-width: 100% !important;           /* span the window (no centered pill) */
+  height: var(--masthead-h);
+  display: flex; align-items: center;
+  padding: 0 24px;
 }
 
-/* Remove the inner white capsule */
+/* kill the inner white capsule */
 .masthead .greedy-nav{
   background: transparent !important;
   border: 0 !important;
@@ -84,19 +95,30 @@ body{
   width: 100% !important;
 }
 
-/* Nav text over the white bar */
+/* nav text color over the bar */
 .masthead .site-title,
 .masthead .greedy-nav .visible-links > li > a,
 .masthead .greedy-nav .greedy-nav__toggle{
   color: #222 !important;
 }
 
-/* If a thin line still shows, hide pseudo elements */
+/* remove any thin lines some skins add */
 .masthead::before,
 .masthead::after,
 .masthead__inner-wrap::before,
 .masthead__inner-wrap::after,
 .masthead .greedy-nav::before,
-.masthead .greedy-nav::after{ display:none !important; border:0 !important; }
+.masthead .greedy-nav::after{
+  display: none !important;
+  border: 0 !important;
+}
 
-
+/* optional: soft global haze to keep text readable over busy images */
+body::before{
+  content:"";
+  position: fixed;
+  inset: 0;
+  background: rgba(255,255,255,0.30);   /* tweak 0.25–0.45 or remove */
+  pointer-events: none;
+  z-index: 0;
+}
