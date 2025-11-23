@@ -60,3 +60,18 @@ A full and updated list is available on the [Publications](/publications/) page.
 ## Looking ahead
 
 I am preparing PhD applications for Fall 2026 entry in economics, public policy, and management science & engineering, with a focus on power systems, market design, and the clean energy transition. I’m excited about work that connects rigorous quantitative modeling with practical questions of how to design electricity markets that support deep decarbonization.
+
+<style>
+  body{
+    background-image:url("/files/bg.png");
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-attachment:fixed;
+    background-position:center;
+  }
+  .masthead,.page,.page__footer,.initial-content,.page__inner{
+    background-color:rgba(255,255,255,0.92);
+    backdrop-filter:blur(2px);
+  }
+</style>
+
