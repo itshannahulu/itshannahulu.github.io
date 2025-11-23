@@ -10,3 +10,12 @@ This project analyzes how perturbations to wildfire injection heights affect mod
 
 You can download the full writing sample here:
 [Injection Height Perturbation – Writing Sample](/files/injection_height_perturbation_writing_sample.pdf)
+
+### Slides
+
+<embed src="/files/injection_height_slides.pdf"
+       type="application/pdf"
+       width="100%"
+       height="600px">
+</embed>
+[Open slides in a new tab](/files/injection_height_slides.pdf)
