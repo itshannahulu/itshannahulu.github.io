@@ -54,8 +54,10 @@ body{
   background: url("/files/bg.png") center/cover fixed no-repeat;
 }
 
-/* Transparent panels (no white card) */
+/* Transparent panels (no white card) + transparent nav */
 .masthead,
+.masthead__inner-wrap,
+.greedy-nav,
 .page,
 .page__inner,
 .page__content,
@@ -63,6 +65,7 @@ body{
 .initial-content {
   background: transparent !important;
   box-shadow: none !important;
+  border: 0 !important;
 }
 
 /* Keep the author sidebar visually above the page content */
