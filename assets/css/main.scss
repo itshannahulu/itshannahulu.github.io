@@ -67,7 +67,8 @@ body{
 .greedy-nav .site-title,
 .greedy-nav .visible-links > li > a,
 .greedy-nav .hidden-links,
-.greedy-nav .greedy-nav__toggle {
+.greedy-nav .greedy-nav__toggle,
+.masthead__menu-item {
   background: transparent !important;
 }
 
@@ -78,6 +79,5 @@ body{
 .masthead__inner-wrap::after,
 .greedy-nav::before,
 .greedy-nav::after {
-  display: none !important;
-  border: 0 !important;
+  content: none !important;
 }
