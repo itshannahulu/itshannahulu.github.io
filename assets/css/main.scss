@@ -42,16 +42,19 @@
     "vendor/font-awesome/brands"
 ;
 
-/* Remove hero/banner globally (belt & suspenders) */
+/* Remove hero/banner everywhere */
 .page__hero,
-.page__hero--overlay { display: none !important; }
+.page__hero--overlay { display:none !important; }
+
+/* Tighten top spacing if the hero added space */
+.initial-content { margin-top: 0 !important; padding-top: 0 !important; }
 
 /* Wallpaper */
 body{
   background: url("/files/bg.png") center/cover fixed no-repeat;
 }
 
-/* Make panels transparent (no white card) */
+/* Transparent panels (no white card) */
 .masthead,
 .page,
 .page__inner,
@@ -62,22 +65,16 @@ body{
   box-shadow: none !important;
 }
 
-/* Keep sidebar visually above the content so it doesn't look "covered" */
-.sidebar, .sidebar__left, .sidebar__right {
-  position: relative;
-  z-index: 5;
-}
-.page, .page__inner {
-  position: relative;
-  z-index: 1;
-}
+/* Keep the author sidebar visually above the page content */
+.sidebar, .sidebar__left, .sidebar__right { position: relative; z-index: 5; }
+.page, .page__inner { position: relative; z-index: 1; }
 
-/* Soft global haze for readability (tune or remove) */
+/* Soft global haze for readability — choose ONE opacity */
 body::before{
   content:"";
   position: fixed;
   inset: 0;
-  background: rgba(255,255,255,0.35-0.45); /* try 0.25–0.45 */
+  background: rgba(255,255,255,0.32);   /* try 0.28–0.42 to taste */
   pointer-events: none;
   z-index: 0;
 }
