@@ -17,5 +17,5 @@ You can download the full writing sample here:
        type="application/pdf"
        width="100%"
        height="600px">
-</embed>
+
 [Open slides in a new tab](/files/injection_height_slides.pdf)
