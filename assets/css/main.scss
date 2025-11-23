@@ -54,30 +54,40 @@ body{
   background: url("/files/bg.png") center/cover fixed no-repeat;
 }
 
-/* kill the white nav bar */
-.masthead,
-.masthead__inner-wrap,
-.greedy-nav {
+/* ===== Full-width top bar ===== */
+.masthead{
+  background: rgba(255,255,255,0.95);   /* solid: #fff; or try 0.9–1.0 */
+  backdrop-filter: blur(6px);           /* nice frosted look; optional */
+  box-shadow: 0 1px 0 rgba(0,0,0,.08);  /* subtle bottom line */
+  position: sticky; top: 0; z-index: 100;
+  padding: 0;                           /* removes extra vertical padding on some skins */
+}
+
+/* let the bar span the whole window, not a centered "pill" */
+.masthead__inner-wrap{
+  max-width: 100% !important;
+  padding-left: 24px; padding-right: 24px;  /* side gutters */
+}
+
+/* kill the rounded/white pill around links that the Air skin adds */
+.masthead .greedy-nav{
   background: transparent !important;
+  border: 0 !important;
   box-shadow: none !important;
-  border: 0 !important;
+  border-radius: 0 !important;
 }
 
-/* also clear the inner bits that can keep a white fill */
-.greedy-nav .site-title,
-.greedy-nav .visible-links > li > a,
-.greedy-nav .hidden-links,
-.greedy-nav .greedy-nav__toggle {
-  background: transparent !important;
+/* nav text color over the white bar */
+.masthead .site-title,
+.masthead .greedy-nav .visible-links > li > a,
+.masthead .greedy-nav .greedy-nav__toggle { color: #222 !important; }
+
+/* optional: cleaner hover */
+.masthead .greedy-nav .visible-links > li > a:hover{
+  background: rgba(0,0,0,0.04);
+  border-radius: 6px;
 }
 
-/* some skins draw a thin line under the masthead via pseudo-elements */
-.masthead::before,
-.masthead::after,
-.masthead__inner-wrap::before,
-.masthead__inner-wrap::after,
-.greedy-nav::before,
-.greedy-nav::after {
-  display: none !important;
-  border: 0 !important;
-}
+/* remove any hero gap if you disabled the hero above */
+.page__hero, .page__hero--overlay{ display:none !important; }
+.initial-content{ margin-top:0 !important; padding-top: 1rem !important; }
