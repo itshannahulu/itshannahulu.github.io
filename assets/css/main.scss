@@ -54,16 +54,30 @@ body{
   background: url("/files/bg.png") center/cover fixed no-repeat;
 }
 
-/* Transparent panels (no white card) + transparent nav */
+/* kill the white nav bar */
 .masthead,
 .masthead__inner-wrap,
-.greedy-nav,
-.page,
-.page__inner,
-.page__content,
-.page__footer,
-.initial-content {
+.greedy-nav {
   background: transparent !important;
   box-shadow: none !important;
+  border: 0 !important;
+}
+
+/* also clear the inner bits that can keep a white fill */
+.greedy-nav .site-title,
+.greedy-nav .visible-links > li > a,
+.greedy-nav .hidden-links,
+.greedy-nav .greedy-nav__toggle {
+  background: transparent !important;
+}
+
+/* some skins draw a thin line under the masthead via pseudo-elements */
+.masthead::before,
+.masthead::after,
+.masthead__inner-wrap::before,
+.masthead__inner-wrap::after,
+.greedy-nav::before,
+.greedy-nav::after {
+  display: none !important;
   border: 0 !important;
 }
