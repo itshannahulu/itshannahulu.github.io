@@ -41,3 +41,17 @@
     "vendor/font-awesome/solid",
     "vendor/font-awesome/brands"
 ;
+
+body {
+  background-image: url("/files/bg.jpg");   /* or /images/bg.jpg if you created that folder */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+/* Make content readable over the image */
+.masthead, .page, .page__footer {
+  background-color: rgba(255,255,255,0.92);
+  backdrop-filter: blur(2px);
+}
