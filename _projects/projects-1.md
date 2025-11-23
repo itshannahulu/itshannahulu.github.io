@@ -4,6 +4,9 @@ collection: projects
 permalink: /projects/injection-height-perturbation/
 excerpt: "Writing sample on modeling wildfire smoke injection heights and vertical CO distribution biases."
 date: 2024-05-01
+featured: true
+embed_pdf: /files/injection_height_slides.pdf
+
 ---
 
 This project analyzes how perturbations to wildfire injection heights affect modeled CO distributions and compares model output against observations.
