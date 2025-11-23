@@ -67,17 +67,3 @@ body{
   box-shadow: none !important;
   border: 0 !important;
 }
-
-/* Keep the author sidebar visually above the page content */
-.sidebar, .sidebar__left, .sidebar__right { position: relative; z-index: 5; }
-.page, .page__inner { position: relative; z-index: 1; }
-
-/* Soft global haze for readability — choose ONE opacity */
-body::before{
-  content:"";
-  position: fixed;
-  inset: 0;
-  background: rgba(255,255,255,0.32);   /* try 0.28–0.42 to taste */
-  pointer-events: none;
-  z-index: 0;
-}
