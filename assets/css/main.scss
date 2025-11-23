@@ -42,83 +42,37 @@
     "vendor/font-awesome/brands"
 ;
 
-/* ============================
-   CUSTOM OVERRIDES
-   ============================ */
-
-/* remove any hero space that might be injected */
-.page__hero, .page__hero--overlay { display:none !important; }
-.initial-content { margin-top:0 !important; padding-top:0 !important; }
-
-/* wallpaper */
-body{
-  background: url("/files/bg.png") center/cover fixed no-repeat;
-}
-
-/* transparent content panels */
-.page,
-.page__inner,
-.page__content,
-.page__footer,
-.initial-content{
-  background: transparent !important;
-  box-shadow: none !important;
-}
-
-/* sticky, full-width top bar */
-:root { --masthead-h: 56px; } /* adjust if your bar is taller */
+/* === Sticky, full-width top bar === */
+:root { --masthead-h: 56px; }        /* adjust if your bar is taller */
+html, body { margin: 0; padding: 0; }
 
 .masthead{
-  position: sticky;
+  position: sticky;                  /* stays at top while scrolling */
   top: 0;
   z-index: 1000;
-  background: rgba(255,255,255,0.95);   /* #fff for fully solid */
-  backdrop-filter: blur(6px);
+  background: rgba(255,255,255,0.95); /* or #fff */
+  backdrop-filter: blur(6px);         /* optional frosted effect */
   box-shadow: 0 1px 0 rgba(0,0,0,.08);
   border: 0;
-  margin: 0 !important;
 }
 
 .masthead__inner-wrap{
-  max-width: 100% !important;           /* span the window (no centered pill) */
+  max-width: 100% !important;         /* full width, not a centered pill */
   height: var(--masthead-h);
   display: flex; align-items: center;
-  padding: 0 24px;
+  padding: 0 24px;                    /* side gutters */
 }
 
-/* kill the inner white capsule */
 .masthead .greedy-nav{
-  background: transparent !important;
-  border: 0 !important;
-  border-radius: 0 !important;
-  box-shadow: none !important;
+  background: transparent !important; /* kill inner capsule */
+  border: 0 !important; border-radius: 0 !important; box-shadow: none !important;
   width: 100% !important;
 }
 
-/* nav text color over the bar */
 .masthead .site-title,
 .masthead .greedy-nav .visible-links > li > a,
-.masthead .greedy-nav .greedy-nav__toggle{
-  color: #222 !important;
-}
+.masthead .greedy-nav .greedy-nav__toggle { color: #222 !important; }
 
-/* remove any thin lines some skins add */
-.masthead::before,
-.masthead::after,
-.masthead__inner-wrap::before,
-.masthead__inner-wrap::after,
-.masthead .greedy-nav::before,
-.masthead .greedy-nav::after{
-  display: none !important;
-  border: 0 !important;
-}
-
-/* optional: soft global haze to keep text readable over busy images */
-body::before{
-  content:"";
-  position: fixed;
-  inset: 0;
-  background: rgba(255,255,255,0.30);   /* tweak 0.25–0.45 or remove */
-  pointer-events: none;
-  z-index: 0;
-}
+/* remove any hero gap if a banner was rendered elsewhere */
+.page__hero, .page__hero--overlay { display:none !important; }
+.initial-content { margin-top: 0 !important; }  /* sticky keeps its own space */
