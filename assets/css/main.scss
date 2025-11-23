@@ -42,16 +42,18 @@
     "vendor/font-awesome/brands"
 ;
 
-body {
-  background-image: url("/files/bg.png"); 
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-  background-position: center;
+
+body{
+  background: url("/files/bg.png") center/cover fixed no-repeat;
 }
 
-/* Make content readable over the image */
-.masthead, .page, .page__footer {
-  background-color: rgba(255,255,255,0.92);
-  backdrop-filter: blur(2px);
+.masthead,
+.page,
+.page__footer,
+.initial-content,
+.page__inner{
+  background: #fff;               /* solid white panels */
 }
+
+.page{ box-shadow: 0 10px 24px rgba(0,0,0,.08); }  /* subtle depth */
+
